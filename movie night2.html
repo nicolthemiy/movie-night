@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎬 Movie Night Surprise 🍿</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #fce6f1; /* light pink */
+        }
+
+        h1 {
+            color: #ff66b2;
+        }
+
+        p {
+            color: #333;
+            font-size: 18px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #ff66b2;
+            color: #fff;
+            font-size: 16px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e55a9b;
+        }
+
+        .idea-box {
+            margin-top: 20px;
+            padding: 20px;
+            border: 2px solid #ff66b2;
+            border-radius: 10px;
+            text-align: left;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .idea-box:hover {
+            transform: scale(1.05);
+        }
+
+        .interactive-checkbox {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .interactive-checkbox input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background-color: #fff;
+            border: 2px solid #ff66b2;
+            border-radius: 5px;
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 8px;
+            top: 3px;
+            width: 7px;
+            height: 13px;
+            border: solid #ff66b2;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+        }
+
+        .interactive-checkbox input:checked + .checkmark:after {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎬 Movie Night Surprise 🍿</h1>
+    
+    <p>Hey [Thihansa]!</p>
+    
+    <p>I have a special surprise for you. How about a cozy movie night together?</p>
+    
+    <p>I've picked a few options for us to choose from. Click the button below to check them out!</p>
+
+    <button onclick="showMovies()">Check out the movie options</button>
+
+    <div id="movieOptions" style="display: none;">
+        <p>Here are the movie options:</p>
+        <ul>
+            <li>Option 1: [Casablanca]</li>
+            <li>Option 2: [La La Land]</li>
+            <li>Option 3: [The Fault In Our Stars]</li>
+        </ul>
+        <p>Let me know which one you'd like to watch!</p>
+    </div>
+
+    <img src="https://placekitten.com/800/400" alt="Cozy Movie Night" />
+
+    <div class="idea-box">
+        <p>Tick the box if you like the idea, and feel free to leave your own suggestion:</p>
+        <label class="interactive-checkbox">
+            <input type="checkbox" id="likeIdea">
+            <span class="checkmark"></span>
+            I like the idea! 🌟
+        </label>
+        <br>
+        <label for="idea">My idea:</label>
+        <input type="text" id="idea" name="idea" placeholder="Enter your idea here...">
+    </div>
+
+    <script>
+        function showMovies() {
+            var movieOptionsDiv = document.getElementById('movieOptions');
+            movieOptionsDiv.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
